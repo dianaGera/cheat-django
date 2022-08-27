@@ -1,0 +1,72 @@
+body {
+    background-color: white;
+}
+.block_form {
+    display: flex;
+}
+div .left_side_of_form {
+    background-image: url("../img/background.jpg");
+    background-position: bottom;
+    height: 1700px;
+    width: 50%;
+}
+div .form {
+    width: 50%;
+    padding: 0 5%;
+}
+div .form > h2 {
+    font-size: 44px;
+    margin: 10% auto;
+}
+.label > label {
+    font-size: 22px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.block_field {
+    margin-bottom: 30px;
+}
+.field > input, textarea, select, button {
+    border: 1px solid #4c5670;
+    border-radius: 10px;
+    width: 100%;
+    padding: 4px;
+}
+.field > input, select, button {
+    height: 40px;
+}
+.field > select, button {
+    background-color: white;
+}
+
+.field > select:read-only { background: #eee; }
+.field > select:-moz-read-only { background: #eee; }
+
+input[type="file"] {
+    cursor: pointer;
+    height: fit-content;
+    padding: 3px;
+}
+button {
+    display: block;
+    width: 35%;
+    margin: auto;
+    font-weight: 600;
+}
+button:hover {
+    border-color: #f3670a;
+    color: #f3670a;
+}
+div .errors {
+    margin: 20px;
+}
+.errorlist > li {
+    color: red;
+    padding-bottom: 10px;
+    list-style-type: disc;
+}
+.field > img {
+    display: block;
+    width: 100px;
+    margin: 10px auto;
+}

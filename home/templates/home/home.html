@@ -1,0 +1,30 @@
+{% extends 'home/basic.html' %}
+{% load static %}
+{% load tags %}
+{% block home %}
+<section class="description">
+    <div class="max-w-600 bg-trans-grey home-title">
+        <h1 class='text-f-50'>Hello, there</h1>
+        <div class="text-center text-larger"><span class='text-f-50 text-larger text-bold '>Cheat Django</span> contains all the cheat sheets that I have collected while learning web development. It was my first acquaintance with this framework and my first steps in the frontend.</div>
+    </div>
+
+    <div class="w-full block-center home-title-block">
+        <div class='search-area flex'>
+            <div class='home-django-img'>
+                <img src='{% static "home/img/Get-Started-With-Django_Watermarked.jpg" %}' alt='django-img' class='django-img'>
+            </div>
+           
+            <div class='search-content'>
+                <p class='text-32px text-bold search-label'>Try to search for interesting topic:</p>
+                <input class='form-control' type='text' name='search' placeholder='search'>
+            </div>
+        </div>
+        
+
+       
+
+    </div>
+   
+</section>
+
+{% endblock home %}

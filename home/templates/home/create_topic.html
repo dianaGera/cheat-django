@@ -1,0 +1,78 @@
+{% extends 'home/basic.html' %}
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'home/css/form.css' %}">
+{% endblock stylesheet %}
+{% block content %}
+<div class="block_form">
+    <div class="left_side_of_form">
+    </div>
+    <div class="form">
+        <h2>{{ title }}</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.non_field.errors }}
+            <div class="block_field">
+                <div class="label"><label for = '{{form.title.id_for_label}}'> Title: </label></div>
+                <div class="field">{{ form.title }}</div>
+            </div>
+            <div class="errors">{{ form.title.errors }}</div>
+
+            {{ form.non_field.errors }}
+            <div class="block_field">
+                <div class="label"><label for = '{{form.slug.id_for_label}}'> URL-name: </label></div>
+                <div class="field">{{ form.slug }}</div>
+            </div>
+            <div class="errors">{{ form.slug.errors }}</div>
+
+            {{ form.non_field.errors }}
+            <div class="block_field">
+                <div class="label"><label for = '{{form.description.id_for_label}}'> Description: </label></div>
+                <div class="field">{{ form.description }}</div>
+            </div>
+            <div class="errors">{{ form.description.errors }}</div>
+
+            {{ form.non_field.errors }}
+            <div class="block_field">
+                <div class="label"><label for = '{{form.content.id_for_label}}'> Content: </label></div>
+                {{ form.content }}
+                {{ form.media }}
+            </div>
+            <div class="errors">{{ form.content.errors }}</div>
+
+            {{ form.non_field.errors }}
+            <div class="block_field">
+                <div class="label"><label for = '{{form.html_content.id_for_label}}'> HTML content: </label></div>
+                <div class="field">{{ form.html_content }}</div>
+            </div>
+            <div class="errors">{{ form.html_content.errors }}</div>
+
+            {{ form.non_field.errors }}
+            <div class="block_field">
+                <div class="label"><label for = '{{form.image.id_for_label}}'> Image: </label></div>
+                <div class="field">{{ form.image }}</div>
+            </div>
+            <div class="errors">{{ form.image.errors }}</div>
+
+            {{ form.non_field.errors }}
+            <div class="block_field" style="display: none;">
+                <div class="label"><label for = '{{form.category.id_for_label}}'> Category: </label></div>
+                <div class="field">{{ form.category }}</div>
+            </div>
+            <div class="errors">{{ form.category.errors }}</div>
+
+            {{ form.non_field.errors }}
+            <div class="block_field" style="display: none;">
+                <div class="label"><label for = '{{form.subcategory.id_for_label}}'> Subcategory: </label></div>
+                <div class="field">{{ form.subcategory }}</div>
+            </div>
+            <div class="errors">{{ form.subcategory.errors }}</div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+
+

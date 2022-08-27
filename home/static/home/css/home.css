@@ -1,0 +1,29 @@
+
+.home-title-block {
+  background-color: #f3b65d;
+  border-radius: 20px;
+  height: fit-content;
+} 
+
+.home-title {
+  margin: 145px auto;
+}
+
+
+.django-img {
+  width: 55%;
+  margin: 100px 0px 50px 50px;
+}
+
+.search-content {
+  width: 100%;
+  margin: auto 100px auto -250px;
+}
+
+
+
+.search-label {
+  color: rgb(30, 107, 80);
+  font-weight: 900;
+  letter-spacing: -1px;
+}

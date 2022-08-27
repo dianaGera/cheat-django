@@ -1,0 +1,14 @@
+asgiref==3.4.1
+Django==3.2.9
+django-ckeditor==6.1.0
+django-ckeditor-5==0.0.14
+-e git+https://github.com/jazzband/django-debug-toolbar.git@1724c4ba9aa0155e3a381d11585177b5f931faac#egg=django_debug_toolbar
+django-js-asset==1.2.2
+django-ranged-response==0.2.0
+django-simple-captcha==0.5.14
+django-smtp-ssl==1.0
+mysqlclient==2.1.0
+Pillow==8.4.0
+pytz==2021.3
+six==1.16.0
+sqlparse==0.4.2

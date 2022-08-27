@@ -1,0 +1,15 @@
+{% extends 'home/basic.html' %}
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'home/css/forum.css' %}">
+{% endblock stylesheet %}
+{% block content %}
+<div class="forum_block">
+    <div class="explanation">
+        <h2>Still in Development Mode</h2>
+    </div>
+    <div class="explanation_image">
+        <img src="{% static 'home/img/How-To-Determine-Link.gif'%}" alt="Image">
+    </div>
+</div>
+{% endblock content %}
