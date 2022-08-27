@@ -22,35 +22,30 @@
          </div>
             <div class="create_new_content"><a href="#alert"><span>+</span>Add New Topic</a></div>
         {% endif %}
+
+        
         <div class="table_content">
-            <!--            need to edit below line-->
-            {% for category in categories %}
-            {% if category.subcategory_set.count > 2 %}
+            
                 <ul class="category">
-                    <li><a href="{{ category.get_absolute_url }}">{{ category }}</a></li>
+                    <li><a href="#">Django</a></li>
                     <ul class="subcategory">
-                {% for subcategory in category.subcategory_set.all %}
-                    {% if subcategory.topic_set.count >= 1 %}
-                        {% if slug == subcategory.slug %}
-                            <li><a href="{{ subcategory.get_absolute_url }}" class="select">{{ subcategory }}</a></li>
-                        {% else %}
+                        {% for subcategory, topics in content.items %}
                             <li><a href="{{ subcategory.get_absolute_url }}">{{ subcategory }}</a></li>
-                        {% endif %}
-                    {% endif %}
-                        <ul class="topic">
-                            {% for topic in subcategory.topic_set.all %}
-                            {% if subcategory.topic_set.count > 1 %}
+
+                            <ul class="topic">
+                                {% for topic in topics %}
                                     <li><a href='{{ subcategory.get_absolute_url }}#{{ topic.slug }}'>{{ topic }}</a></li>
-                            {% endif %}
-                            {% endfor %}
-                        </ul>
-                {% endfor %}
+                                {% endfor %}
+                            </ul> 
+                        {% endfor %}
                     </ul>
                 </ul>
-            {% endif %}
-            {% endfor %}
+
+
+            
+                   
         </div>
-<!--        {% endblock sidebar %}-->
+ {% endblock sidebar %}
 <!--        {% endcache %}-->
     </div>
 

@@ -11,6 +11,18 @@ from .models import Category, SubCategory, Topic
 from .form import CreateTopic, CreateTopicTest, RegisterUser, Contact
 
 
+def get_context():
+    topics = Topic.objects.filter(is_published=True).select_related('subcategory').order_by('subcategory__order')
+        
+    content = dict()
+    for topic in topics:
+        if not content.get(topic.subcategory):
+            content[topic.subcategory] = []
+        content[topic.subcategory].append(topic)
+    return content
+
+
+    
 class Home(TemplateView):
     template_name = 'home/home.html'
     extra_context = {'title': 'Diana Matkava'}
@@ -26,9 +38,10 @@ class Blog(ListView):
     paginate_by = 5
 
     def get_context_data(self, *, object_list=None, **kwargs):
+        
         context = super().get_context_data(**kwargs)
-        context['categories'] = Category.objects.all()
         context['title'] = 'Blog'
+        context['content'] = get_context()
         return context
 
     def get_queryset(self):
@@ -52,6 +65,7 @@ def subcategory(request, slug):
     paginator = Paginator(topic, 3)
     page_number = request.GET.get('page', 1)
     page_obj = paginator.get_page(page_number)
+    
     context = {
         'page_obj': page_obj,
         'topics': page_obj,
@@ -60,6 +74,7 @@ def subcategory(request, slug):
         'slug': slug,
         'title': SubCategory.objects.get(slug=slug)
     }
+    context['content'] = get_context()
     return render(request, 'home/blog.html', context=context)
 
 # class SubCategoryView(ListView):
