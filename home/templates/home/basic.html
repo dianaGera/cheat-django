@@ -33,18 +33,18 @@
         <div class="coll" style='min-height: 100vh;'>
           <div class="row-12 m-4">
 
-            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between header">
                 <div class="navbar-header">
                     <a href="{% url 'home' %}" class="navbar-brand text-f-50 text-bold text-larger">Cheat Django</a>
                 </div>
-                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style='widthL 100%; margin-left: auto; '>
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style='margin-left: auto; '>
                     <a class="nav-link px-4 link-dark" href="{% url 'blog' %}">Catalog</a>
                     <a class="nav-link px-4 link-dark" href="{% url 'portfolio' %}">About</a>
                     <a class="nav-link px-4s link-dark" href="{% url 'contact' %}">Contact</a>            
                 </ul>
+                
             
-            
-                <div class="col-md-3 text-end">
+                <div class="text-end">
                     
                     <div class="header_menu flex">
                         {% if request.user.is_authenticated %}
@@ -63,6 +63,7 @@
 
                 </div>
             </header>
+            
 
 
         {% if messages %}

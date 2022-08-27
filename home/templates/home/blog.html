@@ -13,12 +13,13 @@
 <!--    {% block sidebar %}-->
     <div class="left_navbar">
         <h2>TABLE OF THE CONTENT</h2>
-        <div id="alert">
-           <a href="{% url 'registration' %}">Register</a> or <a href="{% url 'login' %}">Singin</a> 
-        </div>
+        
         {% if request.user.is_authenticated %}
-            <div class="create_new_content"><a href="{% url 'create_topic' %}"><span>+</span>Add New Topic</a></div>
+            <div class="create_new_content text-f-50"><a href="{% url 'create_topic' %}"><span>+</span>Add New Topic</a></div>
         {% else %}
+        <div id="alert">
+            <a href="{% url 'registration' %}">Register</a> or <a href="{% url 'login' %}">Singin</a> 
+         </div>
             <div class="create_new_content"><a href="#alert"><span>+</span>Add New Topic</a></div>
         {% endif %}
         <div class="table_content">
@@ -53,7 +54,7 @@
 <!--        {% endcache %}-->
     </div>
 
-    <div class="content">
+    <div class="content my-4">
         {% for topic in topics %}
         <section id="{{ topic.slug }}">
             <h2>{{ topic }}</h2>
@@ -62,9 +63,9 @@
             <p>{{ topic.description }}</p>
             <p>{{ topic.content }}</p>
             <p>{{ topic.html_content }}</p>
-            <p>Created date: {{ topic.data }}</p>
-            <p>Updated date:{{ topic.update_data }}</p>
-            <p>Author: {{ topic.author }}</p>
+            <p class='author-details'>Created date: {{ topic.data }}</p>
+            <p class='author-details'>Updated date:{{ topic.update_data }}</p>
+            <p class='author-details'>Author: {{ topic.author }}</p>
        <!-- {% endautoescape %} -->
        </section>
         {% endfor %}

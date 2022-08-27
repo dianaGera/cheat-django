@@ -5,11 +5,9 @@
 {% endblock stylesheet %}
 {% block content %}
 <div class="block_form">
-    <div class="left_side_of_form">
-    </div>
     <div class="form">
-        <h2>{{ title }}</h2>
-        <form action="#" method="post" enctype="multipart/form-data">
+        <h2 style='font-size: 38px'>{{ title }}</h2>
+        <form action="#" method="post" enctype="multipart/form-data" style='width: 700px'>
             {% csrf_token %}
             {{ form.non_field.errors }}
             <div class="block_field">
@@ -31,14 +29,6 @@
                 <div class="field">{{ form.description }}</div>
             </div>
             <div class="errors">{{ form.description.errors }}</div>
-
-            {{ form.non_field.errors }}
-            <div class="block_field">
-                <div class="label"><label for = '{{form.content.id_for_label}}'> Content: </label></div>
-                {{ form.content }}
-                {{ form.media }}
-            </div>
-            <div class="errors">{{ form.content.errors }}</div>
 
             {{ form.non_field.errors }}
             <div class="block_field">
@@ -68,7 +58,7 @@
             </div>
             <div class="errors">{{ form.subcategory.errors }}</div>
 
-            <button type="submit">Submit</button>
+            <button type="submit" class='mb-50'>Submit</button>
         </form>
     </div>
 </div>
