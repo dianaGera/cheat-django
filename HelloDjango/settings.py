@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-w7lx_%%u9!&zoq!#5ex7k%8=vm(j9t^lxj326v)nauxw#@+2oq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'e9f5-2a02-8109-a1c0-1b04-90bd-9f44-e032-b3eb.eu.ngrok.io']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -84,14 +84,12 @@ WSGI_APPLICATION = 'HelloDjango.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'dianambo_db',
-        # 'USER': 'dianambo_db',
-        # 'PASSWORD': 'KhjVEkuY1533',
-        # 'HOST': 'localhost',
-        # 'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_lessons',
+        'USER': 'django',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
