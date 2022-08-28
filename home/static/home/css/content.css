@@ -27,7 +27,7 @@ div .content {
     padding: 3% 15% 2% 7%;
     margin-left: 30%;
 }
-div .content > .paginator_block {
+.paginator_block {
     position: sticky;
     bottom: 10px;
     background-color: rgba(233, 231, 231, 0.805);
@@ -37,31 +37,23 @@ div .content > .paginator_block {
     width: fit-content;
     margin: 80px auto;
 }
-div .content > .paginator_block  a {
+.paginator_block  a {
     display: block;
     margin: 8px;
     padding: 10px 15px;
     border: 1px solid #4c5670;
     border-radius: 50%;
 }
-div .content > .paginator_block  a:hover {
-    color: #f3670a;
-    border-color: #f3670a;
-    font-size: 20px;
-    margin: 3px;
-}
-div .content > .paginator_block .selected {
+.paginator_block  a:hover {
     color: #f3670a;
     border-color: #f3670a;
 }
-div .content > .paginator_block > .next > a, div .content > .paginator_block > .previous > a {
+.paginator_block .selected {
+    color: #f3670a;
+    border-color: #f3670a;
+}
+.paginator_block > .next > a, div .content > .paginator_block > .previous > a {
     border-radius: 10px;
-}
-div .content > .paginator_block > .previous > a:hover {
-    margin: 3px;
-}
-div .content > .paginator_block > .next > a:hover {
-    margin: 3px;
 }
 
 
