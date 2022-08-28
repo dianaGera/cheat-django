@@ -35,7 +35,7 @@
 
                             <ul class="topic">
                                 {% for topic in topics %}
-                                    <li><a href='{{ subcategory.get_absolute_url }}#{{ topic.slug }}'>{{ topic }}</a></li>
+                                    <li style='margin-left: 15px'><a href='{{ subcategory.get_absolute_url }}#{{ topic.slug }}'>{{ topic }}</a></li>
                                 {% endfor %}
                             </ul> 
                         {% endfor %}

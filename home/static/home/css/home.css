@@ -2,13 +2,12 @@
 .home-title-block {
   background-color: #f3b65d;
   border-radius: 20px;
-  position: relative;
   width: inherit;
   bottom: 30px
 } 
 
 .home-title {
-  margin: 100px auto;
+  margin: 50px auto;
 }
 
 
@@ -22,7 +21,16 @@
   margin: auto 100px auto -250px;
 }
 
+.get-started {
+  width: 200px;
+  height: 40px;
+  margin: 50px auto;
+}
 
+.get-started>a {
+  width: 200px;
+  font-size: large;
+}
 
 .search-label {
   color: rgb(30, 107, 80);
