@@ -1,3 +1,10 @@
+:root {
+    touch-action: pan-x pan-y;
+    height: 100% 
+  }
+
+
+
 * {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
