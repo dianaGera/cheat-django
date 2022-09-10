@@ -56,5 +56,6 @@ class RegisterUser(UserCreationForm):
 
 class Contact(forms.Form):
     subjects = forms.CharField()
+    email = forms.EmailField()
     message = forms.CharField(widget=forms.Textarea(attrs={'rows': 5}))
     captcha = CaptchaField(label='')

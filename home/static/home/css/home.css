@@ -37,3 +37,12 @@
   font-weight: 900;
   letter-spacing: -1px;
 }
+
+.dj-img {
+  width: fit-content;
+  margin: 20px auto 50px auto;
+}
+
+.code-font {
+  font-family: monospace;
+}

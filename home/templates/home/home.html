@@ -4,12 +4,15 @@
 {% block home %}
 <section class="description">
     <div class="max-w-600 bg-trans-grey home-title">
-        <h1 class='text-f-50'>Hello, there</h1>
-        <div style='width: 600px; text-align: center'><span class='text-f-50 text-bold '>Cheat Django</span> contains all the cheat sheets that I have collected while learning web development. It was my first acquaintance with this framework and my first steps in the frontend. <br><br>This site should have everything that is mentioned in the tutorials, but something was removed due to it's inconsistency and out of date when last reviewed</div>
+        
+        <div class='dj-img'>
+            <img src={% static "home/img/django.webp" %} style='width: 200px;height: 200px; border-radius: 100%;object-fit: cover;'>
+        </div>
+        <h1 class='text-f-50 code-font' style='margin: 30px'>Hello, there</h1>
+        <div style='width: 550px; margin-left: 40px' class='code-font center-block'><span class='text-f-50 code-font text-bold text-larger'>Cheat Django</span> contains all the cheat sheets that I have collected while learning web development. It was my first acquaintance with this framework and my first steps in the frontend. <br><br>This site should have everything that is mentioned in the tutorials, but something was removed due to it's inconsistency and out of date when last reviewed</div>
         <div class='get-started'>
             <a href='{% url 'blog' %}' class='btn btn-outline-primary text-f-50'>Get started</a>
         </div>
-    
     </div>
 
     
