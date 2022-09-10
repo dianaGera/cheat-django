@@ -1,0 +1,1 @@
+web: gunicorn cheat-django.wsgi
