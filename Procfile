@@ -1,1 +1,1 @@
-web: gunicorn cheat-django.wsgi
+web: gunicorn HelloDjango.wsgi
