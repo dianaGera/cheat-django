@@ -34,8 +34,8 @@ Enjoy :)
 
 DATABASE:
     
-# dump the database in custom-format archive
-pg_dump -Fc django-lessons > db.dump
+# dump the database into an archive
+pg_dump -U username -W -F t dbname > db.tar
 
 # restore the database
 pg_restore -d django-lessons db.dump
