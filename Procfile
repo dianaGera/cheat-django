@@ -1,1 +1,2 @@
-web: gunicorn HelloDjango.wsgi
+relese: python manage.py migrate
+web: gunicorn HelloDjango.wsgi --log-file=-
