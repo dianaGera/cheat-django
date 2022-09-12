@@ -40,7 +40,12 @@ pg_dump -U username dbname > filename.sql
 (Heroku CLI) heroku run --app you-app-name pg_dump -U username dbname > filename.sql 
 
 
-# restore the database
+# restore the database using raw SQL
+psql -h host -p port -d dbname -U username -f datafile.sql
+
+
+# restore the database using archive
+
 pg_restore -d django-lessons db.dump
 
-(Heroku CLI) heroku run --app you-app-name pg_restore -d dbname db.sql
+(Heroku CLI) heroku pg: pg_restore -d dbname db.sql --app you-app-name
