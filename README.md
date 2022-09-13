@@ -8,13 +8,11 @@ HTML, CSS, Jinja2<br />
 ###### 06.2021 @dianaGera
 <br />
 <br />
-<br />
-<br />
 
 # Build the project:
 
 <br />
-<br />
+
 ## Setup
 The first thing to do is to clone the repository:
 
@@ -77,6 +75,7 @@ $ python manage.py runserver
 <br />
 <br />
 <br />
+
 # DATABASE:
     
 ### dump the database into an SQL file
@@ -92,7 +91,9 @@ $ psql -h host -p port -d dbname -U username -f filename.sql
 ```
 <br />
 <br />
+
 # Result
+
 <br />
 ![Screenshot](./media/image/2021/11/cheat-django-home.PNG)
 <br />
