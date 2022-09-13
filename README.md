@@ -36,9 +36,7 @@ pip install -r requirements.txt
 ## Restore the database using raw SQL
 
 #### Create the PostgreSQL database
-[Set up PostgreSQL on Windows/Mac/Linux](https://www.codecademy.com/article/installing-and-using-postgresql-locally)
-
-<br />
+[Set up PostgreSQL on Windows/Mac/Linux](https://www.codecademy.com/article/installing-and-using-postgresql-locally)<br />
 
 [Create Database (PostgreSQl official Documentation)](https://www.postgresql.org/docs/current/sql-createdatabase.html)
 ```sh
@@ -98,6 +96,7 @@ $ psql -h host -p port -d dbname -U username -f filename.sql
 # Result
 
 <br />
+
 ![Screenshot](./media/image/2021/11/cheat-django-home.PNG)
 
 <br />
