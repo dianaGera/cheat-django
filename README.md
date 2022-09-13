@@ -37,6 +37,9 @@ pip install -r requirements.txt
 
 #### Create the PostgreSQL database
 [Set up PostgreSQL on Windows/Mac/Linux](https://www.codecademy.com/article/installing-and-using-postgresql-locally)
+
+<br />
+
 [Create Database (PostgreSQl official Documentation)](https://www.postgresql.org/docs/current/sql-createdatabase.html)
 ```sh
 # Create the DB using default credentials or change it in settings.py:
@@ -96,6 +99,8 @@ $ psql -h host -p port -d dbname -U username -f filename.sql
 
 <br />
 ![Screenshot](./media/image/2021/11/cheat-django-home.PNG)
+
 <br />
 <br />
-![Screenshot](media/image/2021/11/cheat-django-lessons.PNG)
+
+![Screenshot](./media/image/2021/11/cheat-django-lessons.PNG)
