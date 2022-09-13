@@ -55,7 +55,7 @@ DATABASES = {
 ```sh
 $ psql -h host -p port -d dbname -U username -f filename.sql
 ```
-Path to db -> django-cheat-sheet/database/db.sql
+Path to db -> django-cheat-sheets/database/db.sql
 
 
 ## Run migrations
@@ -72,8 +72,6 @@ $ python manage.py runserver
 ** Enjoy :)
 
 
-#
-
 
 # DATABASE:
     
@@ -88,3 +86,9 @@ $ pg_dump -U username dbname > filename.sql
 $ psql -h host -p port -d dbname -U username -f filename.sql
 (Heroku CLI)$ heroku pg: psql -h host -p port -d dbname -U username -f filename.sql
 ```
+
+
+# Result
+
+![Screenshot](media\image\2021\11\cheat-django-home.PNG)
+![Screenshot](media\image\2021\11\cheat-django-lessons.PNG)
