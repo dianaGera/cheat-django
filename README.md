@@ -1,18 +1,18 @@
-Link to project: https://cheat-django.herokuapp.com/
-Screenshots attached on the very bottom
+Link to project: https://cheat-django.herokuapp.com/<br />
+Screenshots attached on the very bottom<br />
 
-Purpose of this project was to 
-learn basic Django 3.2.9, MVT, ORM
-DjangoDebugToolbar, Authorization, STMP
-HTML, CSS, Jinja2
+Purpose of this project was to <br />
+learn basic Django 3.2.9, MVT, ORM<br />
+DjangoDebugToolbar, Authorization, STMP<br />
+HTML, CSS, Jinja2<br />
 ###### 06.2021 @dianaGera
-
-
-
-
+<br />
+<br />
+<br />
+<br />
 # Build the project:
-
-
+<br />
+<br />
 ## Setup
 The first thing to do is to clone the repository:
 
@@ -70,11 +70,11 @@ $ python manage.py migrate
 ```sh
 $ python manage.py runserver
 ```
-
+<br />
 ** Enjoy :)
-
-
-
+<br />
+<br />
+<br />
 # DATABASE:
     
 ### dump the database into an SQL file
@@ -88,9 +88,11 @@ $ pg_dump -U username dbname > filename.sql
 $ psql -h host -p port -d dbname -U username -f filename.sql
 (Heroku CLI)$ heroku pg: psql -h host -p port -d dbname -U username -f filename.sql
 ```
-
-
+<br />
+<br />
 # Result
-
+<br />
 ![Screenshot](./media/image/2021/11/cheat-django-home.PNG)
+<br />
+<br />
 ![Screenshot](media/image/2021/11/cheat-django-lessons.PNG)
