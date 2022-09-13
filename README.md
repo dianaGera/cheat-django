@@ -4,13 +4,13 @@ learn basic Django 3.2.9, MVT, ORM
 DjangoDebugToolbar, Authorization, STMP
 HTML, CSS, Jinja2
 ###### 06.2021 @dianaGera
-#
-#
-#
-#
+
+
+
+
 # Build the project:
-#
-#
+
+
 ## Setup
 The first thing to do is to clone the repository:
 
@@ -29,10 +29,10 @@ $ source venv/bin/activate (Linux)
 ```sh
 pip install -r requirements.txt
 ```
-#
-#
+
+
 ## Restore the database using raw SQL
-#
+
 #### Create the PostgreSQL database
 [Set up PostgreSQL on Windows/Mac/Linux](https://www.codecademy.com/article/installing-and-using-postgresql-locally)
 [Create Database (PostgreSQl official Documentation)](https://www.postgresql.org/docs/current/sql-createdatabase.html)
@@ -68,11 +68,13 @@ $ python manage.py migrate
 ```sh
 $ python manage.py runserver
 ```
-#
+
 ** Enjoy :)
+
+
 #
-#
-#
+
+
 # DATABASE:
     
 ### dump the database into an SQL file
