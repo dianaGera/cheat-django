@@ -90,5 +90,5 @@ $ psql -h host -p port -d dbname -U username -f filename.sql
 
 # Result
 
-![Screenshot](media\image\2021\11\cheat-django-home.PNG)
-![Screenshot](media\image\2021\11\cheat-django-lessons.PNG)
+![Screenshot](./media/image/2021/11/cheat-django-home.PNG)
+![Screenshot](media/image/2021/11/cheat-django-lessons.PNG)
