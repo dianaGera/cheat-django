@@ -1,3 +1,5 @@
+Link to project: https://cheat-django.herokuapp.com/
+Screenshots attached on the very bottom
 
 Purpose of this project was to 
 learn basic Django 3.2.9, MVT, ORM
