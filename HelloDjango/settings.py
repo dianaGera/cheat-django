@@ -15,6 +15,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 import django_heroku
 
+from django.core.management.utils import get_random_secret_key  
+
 load_dotenv() 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,12 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY', get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.getenv('DEBUG', 'true'))
 
-ALLOWED_HOSTS = ['127.0.0.1', 'cheat-django.herokuapp.com']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*')
 
 
 # Application definition
@@ -135,7 +137,7 @@ USE_TZ = True
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': '/home/diana/Documents/venv/portfolio/portfolio/django_cache',
+        'LOCATION': os.path.join(BASE_DIR, 'caches'),
     }
 }
 
