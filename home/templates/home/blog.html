@@ -8,41 +8,28 @@
 
 {% block content %}
 
+
+
 <div class="content_block">
 <!--    {% load cache %}-->
 <!--    {% cache 20 sidebar %}-->
-<!--    {% block sidebar %}-->
-    <div class="left_navbar">
-        <h2>TABLE OF THE CONTENT</h2>
-        
-        {% if request.user.is_authenticated %}
-            <div class="create_new_content text-f-50"><a href="{% url 'create_topic' %}"><span>+</span>Add New Topic</a></div>
-        {% else %}
-        <div id="alert">
-            <a href="{% url 'registration' %}">Register</a> or <a href="{% url 'login' %}">Singin</a> 
-         </div>
-            <div class="create_new_content"><a href="#alert"><span>+</span>Add New Topic</a></div>
-        {% endif %}
-
-        
-        <div class="table_content">
-            
-                <ul class="category">
-                    <li><a href="#">Django</a></li>
-                    <ul class="subcategory">
-                        {% for subcategory, topics in content.items %}
-                            <li><a href="{{ subcategory.get_absolute_url }}">{{ subcategory }}</a></li>
-
-                            <ul class="topic">
-                                {% for topic in topics %}
-                                    <li style='margin-left: 15px'><a href='{{ subcategory.get_absolute_url }}#{{ topic.slug }}'>{{ topic }}</a></li>
-                                {% endfor %}
-                            </ul> 
-                        {% endfor %}
-                    </ul>
-                </ul>                   
+{% block sidebar %}
+<div class="menu-icon">
+    <input type="checkbox" id="nav-control" class="nav-control" >
+    <label for="nav-control" class="toggle-button">
+        <div class="wolverine">
+            <div class="claws"></div> <span>menu</span>
         </div>
- {% endblock sidebar %}
+    </label>
+    <nav class="navigation">
+        {% include 'home/leftside_bar.html' %}
+    </nav>
+</div>
+
+<div class='leftside-bar'>
+    {% include 'home/leftside_bar.html' %}
+</div>
+{% endblock sidebar %}
 <!--        {% endcache %}-->
     </div>
 

@@ -141,7 +141,7 @@ def registration(request):
             messages.success(request, 'Successful registration!')
             return redirect('home')
         else:
-            messages.error(request, 'Unsuccessful registration!')
+            messages.error(request, 'Server Error. Please try later')
     else:
         form = RegisterUser()
     return render(request, 'home/form.html', {'form': form, 'title': 'Registration'})

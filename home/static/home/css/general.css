@@ -12,7 +12,6 @@
   letter-spacing: 2px;
   margin: 0;
   padding: 0;
-  
 }
 
 
@@ -163,20 +162,47 @@ pre > code > b {
     color: #f3670a;
 }
 .error, .success, .message_else {
-    padding: 2px;
-    color: white;
     font-weight: 1000;
+    display: block;
     text-align: center;
+    text-decoration: underline;
 }
 .error {
-    background-color: #f3670a;
+    color: red;
 }
 .success {
-    background-color: #92d197;
+    background-color: blue;
 }
 .message_else {
     background-color: grey;
 }
+
+#hideMe {
+    -moz-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 2s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+
 
 header {
     position: sticky;
