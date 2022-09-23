@@ -255,7 +255,8 @@ div .left_navbar {
     .menu-icon {
         display: block;
     }
-    .content {
+    .content, .description {
+        max-width: fit-content!important;
         min-width: fit-content!important;
         margin: 0!important;
         padding: 0!important;
@@ -275,6 +276,10 @@ div .left_navbar {
     }
     h2 {
         font-size: 18px;
+    }
+    section, .content {
+        min-width: 300px!important;
+        width: 100%;
     }
 
 }
