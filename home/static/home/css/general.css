@@ -106,7 +106,7 @@ background-color: #fefefe;
 margin: auto;
 padding: 20px;
 border: 1px solid #888;
-width: 30%;
+width: 500px;
 }
 
 /* The Close Button */
@@ -210,6 +210,25 @@ header {
     background-color: white;
     padding-bottom: 40px;
     padding-top: 20px;
+}
+
+@media (max-width: 675px) {
+    header {
+        position: initial !important;;
+    }
+    .home-title {
+        height: 1000px!important;
+    }
+    .modal-content {
+        width: 250px;
+        font-size: 12px;
+    }
+    div .form > form {
+        width: 100%!important;
+    }
+    div .form > h2 {
+        font-size: 24px!important;
+    }
 }
 
 

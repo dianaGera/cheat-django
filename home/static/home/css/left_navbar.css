@@ -90,7 +90,7 @@ div .left_navbar {
 }
 
 .navigation {
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.781);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -126,7 +126,7 @@ div .left_navbar {
   .toggle-button {
     display: block;
     padding: 10px;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 101;
@@ -263,7 +263,8 @@ div .left_navbar {
         
     }
     .left_navbar {
-        background-color: rgba(255, 255, 255, 0.96);
+        background-color: rgba(255, 255, 255, 0.911);
+        border-right: 0.1px solid rgb(200, 200, 200);
         margin: -100px;
         width: 265px!important;
     }
